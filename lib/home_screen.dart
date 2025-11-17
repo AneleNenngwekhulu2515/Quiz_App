@@ -9,17 +9,30 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         child: Center(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/flutterlogo_photoroom.png',
                 width: 300,
+                height: 300,
+                fit: BoxFit.contain,
               ),
-              
+
               const Text(
                 'Learn Flutter the Fun way!',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 24),
               ),
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: OutlinedButton(onPressed: () {
+                  print('Button pressed!');
+                },
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  
+                ),
+                child: Text('Start Quiz')),
+              )
             ],
           ),
         ),
