@@ -24,14 +24,15 @@ class HomeScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(24.0),
-                child: OutlinedButton(onPressed: () {
+                child: OutlinedButton.icon(onPressed: () {
                   print('Button pressed!');
                 },
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
                   
                 ),
-                child: Text('Start Quiz')),
+                icon: Icon(Icons.arrow_right_alt),
+                label: Text('Start Quiz')),
               )
             ],
           ),
