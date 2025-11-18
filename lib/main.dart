@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/home_screen.dart';
+import 'package:quiz_app/quiz.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      body: HomeScreen() ,),));
+  runApp(
+    Quiz()
+    
+  );
 }
-
-
-
