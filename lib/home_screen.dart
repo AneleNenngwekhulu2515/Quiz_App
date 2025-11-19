@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/quiz.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen(  this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
+
+
+
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
-      backgroundColor: Colors.transparent, // keep gradient from main.dart visible
+      backgroundColor: Colors.transparent, 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +35,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(24.0),
               child: OutlinedButton.icon(
                 onPressed: () {
-                  print('Button pressed!');
+                  startQuiz();
                 },
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
